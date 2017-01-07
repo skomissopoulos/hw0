@@ -25,11 +25,9 @@ public class HW0Runner {
 }
 
 class IntegerStringContainers implements Containers<Integer, String> {
-    private Map<String, Integer> map;
+    private Map<String, Integer> map = null;
 
-    public IntegerStringContainers() {
-        map = null;
-    }
+    public IntegerStringContainers() { }
 
     // Create a set that stores the array of Integers
     public Set<Integer> initSet(Integer[] tArray) {
@@ -51,7 +49,8 @@ class IntegerStringContainers implements Containers<Integer, String> {
         map = mapToStoreInClass;
     }
     
-    // Add a key value to store map with a boolean indicating whether to overwrite existing value
+    // Add a key value to store map with a boolean indicating whether to overwrite existing value.
+    // Return whether the value was set (not necessarily changed).
     public boolean addToMap(String key, Integer value, boolean overwriteExistingKey) {
         if (overwriteExistingKey || !map.containsKey(key)) {
             map.put(key, value);
