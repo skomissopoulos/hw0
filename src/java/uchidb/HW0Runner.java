@@ -62,10 +62,7 @@ class IntegerStringContainers implements Containers<Integer, String> {
     
     // Get a value based on a key
     public Integer getValueFromMap(String key) {
-        if (map.containsKey(key)) {
-            return map.get(key);
-        }
-        return null;
+        return map.get(key);
     }
     
     // An overloaded function to get value from map but with a default value
